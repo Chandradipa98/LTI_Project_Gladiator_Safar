@@ -1,0 +1,36 @@
+LOGIN:
+
+create table Registration(
+FirstName varchar2(45) not NULL,
+LastName varchar2(45) not NULL,
+Email varchar2(45),
+Password varchar2(45) not NULL,
+ConfirmPassword varchar2(45) constraint Pass_Self_Key references Registration (Password),
+ContactNo number(10) not NULL,
+Constraint User_PK Primary Key(Email)
+);
+
+AdminLogin:
+
+create table AdminLogin(
+UserID varchar2(45),
+Password varchar2(45) not NULL,
+Constraint Admin_PK Primary Key(UserID)
+);
+
+Bus:
+create table Bus(
+BusNo number(10),
+Source varchar2(45) not NULL,
+Destination varchar2(45) not NULL,
+Departure number(4,2) not NULL,
+Arrival number(4,2)not NULL,
+Seats number(3) not NULL,
+Constraint Bus_PK Primary Key(BusNo)
+);
+
+1- Decide your project name (must be catchy ----deadline – tomorrow). 
+2- Read the case-study carefully. 
+3- Prepare tables and relationships.(important) 
+4- Identify modules and functionality (try to implement them---later). 
+5- Identify how to send confirmation email. 
