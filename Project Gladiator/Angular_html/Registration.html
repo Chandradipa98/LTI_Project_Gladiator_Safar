@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        #header {
+            background-color: #563d7c;
+        }
+
+        #topnav {
+            background-color: #ffcc99;
+            overflow: hidden;
+        }
+
+        .container button {
+            padding: 14px 20px;
+            margin: 8px 0px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.8;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=tel] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .img {
+            width: auto;
+            max-width: 185px;
+            height: auto;
+
+        }
+
+        #topnav ul {
+            float: left;
+            letter-spacing: 1px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-3 text-white" id="header">
+        <h1 align="center">Welcome to SAFAR !</h1>
+    </div>
+
+    <div class="container-fluid p-3 bg-blue text" id="topnav">
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="Registration.html">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="Login.html">Login</a></li>
+        </ul>
+        <img src="bus logo.jpg" style="float: right; padding-right: 10px; height:50px">
+    </div>
+
+    <div class="container" style="width: fit-content; padding-top: 15px;">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="alert alert-primary" style="text-align: center;">Registration Form</h2>
+
+                <form [formGroup]="userForm">
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input class="form-control" type="text" name="FirstName" id="FirstName" required
+                            formControlName="FirstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input class="form-control" type="text" name="LastName" id="LastName" required
+                            formControlName="LastName">
+                    </div>
+                    <div class="form-group">
+                        <label for="EmailId">Email Id</label>
+                        <input class="form-control" type="email" name="EmailId" id="EmailId" required
+                            formControlName="EmailId">
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneNo">Phone No</label>
+                        <input class="form-control" type="tel" name="PhoneNo" id="PhoneNo" required
+                            formControlName="PhoneNo">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input class="form-control" type="password" name="pass" id="pass" required
+                            formControlName="pass">
+                    </div>
+                    <div class="form-group">
+                        <label for="Cpass">Confirm Password</label>
+                        <input class="form-control" type="password" name="Cpass" id="Cpass" required
+                            formControlName="Cpass">
+                    </div>
+                    <div class="form-group">
+                        <label for="DOB">Date Of Birth</label>
+                        <input class="form-control" type="date" name="DOB" id="DOB" required formControlName="DOB">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Choose Your Gender</label><br>
+                        <input type="radio" id="male" name="gender" value="male" formControlName="gender">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female" formControlName="gender">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other" formControlName="gender">
+                        <label for="other">Other</label>
+                    </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-primary" [disabled]=userForm.invalid>Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

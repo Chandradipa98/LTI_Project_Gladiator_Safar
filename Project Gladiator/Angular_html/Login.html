@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        #header{
+            background-color: #563d7c;
+        }
+        #topnav {
+            background-color: #ffcc99;
+            overflow: hidden;
+        }
+        
+        input[type=password],
+        input[type=email]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .img {
+            width: auto;
+            max-width: 185px;
+            height: auto;
+            
+        }
+        #topnav ul {
+            float: left;
+            letter-spacing: 1px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-3 text-white" id="header">
+        <h1 align="center">Welcome to SAFAR !</h1>
+    </div>
+
+    <div class="container-fluid p-3 bg-blue text" id="topnav">
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="Registration.html">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="Login.html">Login</a></li>
+        </ul>
+        <img src="bus logo.jpg" style="float: right; padding-right: 10px; height:50px">
+    </div>
+
+    <div class="container" style="width: fit-content; padding-top: 15px;">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="alert alert-primary" style="text-align: center;">Login</h2>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="checkbox" type="checkbox" name="remember"> Remember me<br>
+                        </label>
+                    </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-danger">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
