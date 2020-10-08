@@ -1,0 +1,160 @@
+<header>
+
+  <!-- our main logo -->
+  <a id="logo" href="home-page">
+      <img src="assets/bus logo.jpg" alt="Logo">
+      
+  </a>
+
+  <!-- main navigation links -->
+  <nav>
+      <ul>
+          
+          <li><a (click)="back()">Go Back</a></li>
+       </ul>
+  </nav>
+</header>
+<div class="a" >
+ 
+<div id="ig" style="float:left;" >
+  <div class="row">
+    <form [formGroup]="seatForm">
+      <fieldset>
+        <legend>Choose No of seats</legend>
+      <div class="form-group">
+        <div *ngIf="seatForm.controls.noOfSeats.errors && 
+        (seatForm.controls.noOfSeats.touched || seatForm.controls.noOfSeats.dirty)" style="color: red;">
+          Seat Count required!
+        </div>
+        <br>
+        <label for="noOfSeats" style="text-align: center;">Seat Count</label>
+        <input class="form-control" type="number" name="noOfSeats" id="noOfSeats" formControlName="noOfSeats"
+          [(ngModel)]="seat">
+      </div>
+      <button (click)="show(1)" class="btn btn-primary" [disabled]="seatForm.invalid" style="margin-left: 65px;">Submit</button>
+    </fieldset>
+    </form>
+  </div>
+</div>
+<div id="ig" style="float: left;">
+  <div id="show1" style="display: none;">
+    <div >
+      <!--<section>
+        
+        <h2 style="text-align: center;">Booking Details</h2>
+        <div class="tbl-header" >
+          <table cellpadding="0" cellspacing="0" border="0" align="center">
+            <thead>
+              <tr>
+                <th ></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td>Bus No :</td>
+                    <td>{{id}} </td>
+                
+              </tr>
+              <tr>
+                <td>Source :</td>
+                    <td> {{source}} </td>
+                
+              </tr>
+              <tr>
+                <td>Destination :</td>
+                <td>{{destination}} </td>
+                
+              </tr>
+              <tr>
+                <td>Date of Journey :</td>
+                <td>{{DateOfJrny}} </td>
+                
+              </tr>
+              <tr>
+                <td>Arrival Time : </td>
+                    <td>{{arrivalTime}}</td>
+                
+              </tr>
+              <tr>
+                <td>Departure Time :</td>
+                <td>{{departureTime}}</td>
+              </tr>
+              <tr>
+                <td>Seat Number : </td>
+                <td>{{seat}} </td>
+                
+              </tr>
+              <tr>
+                <td>Fare : </td>
+                <td>{{totalFare}} </td>
+                
+              </tr>
+             
+             
+            </tbody>
+          </table>
+        </div>
+        <br>
+        
+          <div id="x">
+            <button class="button button2" (click)="proceed()">Proceed to Payment</button>&nbsp;
+            <button routerLink="/search-bus-page" class="button button2">Cancel</button>
+          </div>
+       
+      </section>-->
+      <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-left">Booking </th>
+        <th class="text-left">Details</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-left">Bus No :</td>
+        <td class="text-left">{{id}}</td>
+        </tr>
+        <tr>
+        <td class="text-left">Source :</td>
+        <td class="text-left">{{source}}</td>
+        </tr>
+        <tr>
+        <td class="text-left">Destination :</td>
+        <td class="text-left">{{destination}} </td>
+        </tr>
+        <tr>
+        <td class="text-left">Date of Journey :</td>
+        <td class="text-left">{{DateOfJrny}}</td>
+        </tr>
+        <tr>
+        <td class="text-left">Arrival Time : </td>
+        <td class="text-left">{{arrivalTime}}</td>
+        </tr>
+        <tr>
+            <td class="text-left">Departure Time : </td>
+            <td class="text-left">{{departureTime}}</td>
+            </tr>
+            <tr>
+                <td class="text-left">Seat Number : </td>
+                <td class="text-left">{{seat}}</td>
+                </tr>  
+                <tr>
+                    <td class="text-left">Fare : </td>
+                    <td class="text-left">{{totalFare}}</td>
+                    </tr>           
+        </tbody>
+        </table>
+        <br>
+        <div id="x">
+          <button class="button button2" (click)="proceed()">Proceed to Payment</button>&nbsp;
+          <button routerLink="/search-bus-page" class="button button2">Cancel</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

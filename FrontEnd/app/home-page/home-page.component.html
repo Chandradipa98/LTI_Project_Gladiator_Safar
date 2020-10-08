@@ -1,0 +1,141 @@
+<header>
+
+    <!-- our main logo -->
+    <a id="logo" href="home-page">
+        <img src="assets/bus logo.jpg" alt="Logo">
+        
+    </a>
+  
+    <!-- main navigation links -->
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="about-page">About Us</a></li>
+            <li><a href="contact-page">Contact Us</a></li>
+            <li><a href="cancel-ticket">Safar</a></li>
+            <li><a href="register-page">Register</a></li>
+            <li><a href="login-page">Login</a></li>
+         </ul>
+    </nav>
+  </header>
+<div class="pic">
+    <h2>Welcome to Safar</h2>
+    <p>Journeys as great as the destinations</p>
+    <div class="form1" id="choice1">
+        <form class="form-inline" [formGroup]="searchForm">
+            <div class="form-group">
+                <input class="form-control mr-sm-2" type="search" placeholder="From" aria-label="Search" formControlName="from">
+            </div>
+            <div class="form-group">
+                <input class="form-control mr-sm-2" type="search" placeholder="To" aria-label="Search" formControlName="to">
+            </div>
+            <div class="form-group">
+                <input class="form-control mr-sm-2" type="date" placeholder="" aria-label="Search" formControlName="date">
+            </div>
+            <button (click)="show()" class="btn btn-outline-light my-2 my-sm-0" type="button" data-target="#myModal">Search Buses</button>
+        </form>
+    </div>
+    <div style="display: none; font-size: 20px;" id="choice2">
+        Procced <button routerLink="/register-page" class="btn btn-default">With Registration?</button> / <button (click)="search()" class="btn btn-default">Without Registration?</button>&nbsp;<button (click)="show2()" class="btn btn-default">Back to Search</button>
+    </div>
+</div>
+
+<!--cards open-->
+<div class="container my-4">
+    <div class="row mb-2">
+        <!--Golden Temple-->
+        <div class="col-md-6">
+            <div
+                class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+
+                    <h3 class="mb-0">Golden Temple</h3>
+                    <div class="mb-1 text-muted">Established:- 1574</div>
+                    <p class="mb-auto">The Golden Temple, also known as Harmandir Sahib, meaning "abode of God"
+                        ) or Darbār Sahib, meaning "exalted court" , is a Gurdwara located in the city of
+                        Amritsar, Punjab, India. It is the pre-eminent spiritual site of Sikhism.</p>
+                    <a href="https://en.wikipedia.org/wiki/Golden_Temple" class="stretched-link">Continue
+                        reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="../../assets/5.jpeg" alt="" width="200" height="295">
+                </div>
+            </div>
+        </div>
+        <!--Golden Temple-->
+
+        <!--Taj Mahal-->
+        <div class="col-md-6">
+            <div
+                class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+
+                    <h3 class="mb-0">Taj Mahal</h3>
+                    <div class="mb-1 text-muted">Established:- 1631</div>
+                    <p class="card-text mb-auto">The Taj Mahal is an ivory-white marble mausoleum on the
+                        southern bank of the river Yamuna in the Indian city of Agra. Commissioned in 1632 by
+                        the Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal.</p>
+                    <a href="https://en.wikipedia.org/wiki/Taj_Mahal" class="stretched-link">Continue
+                        reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="../../assets/4.jpg" width="200" height="295" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Taj Mahal-->
+
+    <!--Adiyogi-->
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div
+                class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+
+                    <h3 class="mb-0">Adiyogi</h3>
+                    <div class="mb-1 text-muted">Established:- 2017</div>
+                    <p class="card-text mb-auto">The Adiyogi statue is a 34-metre-tall, 45-metre-long and
+                        25-metre-wide steel statue of the Hindu deity Shiva with Thirunamam at Coimbatore, Tamil
+                        Nadu. It is recognized by the Guinness World Records as the "Largest Bust Sculpture” in
+                        the world. </p>
+                    <a href="https://en.wikipedia.org/wiki/Adiyogi_Shiva_statue" class="stretched-link">Continue
+                        reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="../../assets/6.jpg" width="200" height="295" alt="">
+                </div>
+            </div>
+        </div>
+        <!--Adiyogi-->
+
+        <!--Statue of Unity-->
+        <div class="col-md-6">
+            <div
+                class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+
+                    <h3 class="mb-0">Statue of Unity</h3>
+                    <div class="mb-1 text-muted">Established:- 2018</div>
+                    <p class="mb-auto">The Statue of Unity is a colossal statue of Indian statesman Vallabhbhai
+                        Patel, who was the first Deputy Prime Minister and Home minister of independent India
+                        and adherent of Mahatma Gandhi during the non-violent Indian Independence movement.</p>
+                    <a href="https://en.wikipedia.org/wiki/Statue_of_Unity" class="stretched-link">Continue
+                        reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="../../assets/7.jpeg" alt="" width="200" height="295">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Statue of Unity-->
+    <!--cards close-->
+</div>
+
+<!--footer-->
+<footer class="container">
+    <p class="float-right"></p>
+    <p>Ⓒ2020-2021 Safar All rights reserved</p>
+</footer>
+<!--footer-->
